@@ -51,7 +51,7 @@ public class ScreenplayStepDefinition {
 	public void iAmLoggenInMercadoLibre() throws Exception {
 		
 		Properties p = readPropertiesFile("login_information.properties");
-		System.out.println(p.getProperty("password"));
+		
 		theActorCalled("User").attemptsTo(OpenTheBrowser.at(),
 				Login.with(MercadoLibrePage.USERNAME_BOX, MercadoLibrePage.PASSWORD_BOX, MercadoLibrePage.CONTINUE_BUTTON,
 						MercadoLibrePage.INGRESAR_BUTTON, MercadoLibrePage.INGRESAR_LOGIN_BUTTON, p.getProperty("user"), p.getProperty("password")));
